@@ -15,7 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <h1 className={`${styles.title} ${inter.className}`}>Archit's Next.js Demo</h1>
+        <h1 className={`${styles.title} ${inter.className}`}>Archit&apos;s Next.js Demo</h1>
         <h3 className={`${styles.subtitle} ${inter.className}`}>Click on any of the cards to see an example of a next.js feature</h3>
         <div className={styles.center}>
           <div className={styles.grid}>
