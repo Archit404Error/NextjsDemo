@@ -1,19 +1,9 @@
 import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
-import { useEffect, useState } from 'react'
+import { GetStaticProps } from 'next';
 
 
-export default function CSR() {
-    const [time, setTime] = useState("Loading...")
-
-    useEffect(() => {
-        (async () => {
-            const res = await fetch("https://worldtimeapi.org/api/ip");
-            const data = await res.json();
-            setTime(data.datetime)
-        })()
-    }, [])
-
+export default function ISR({ time }: { time: string }) {
     return (
         <>
             <Head>
@@ -28,3 +18,13 @@ export default function CSR() {
         </>
     )
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+    const res = await fetch('https://worldtimeapi.org/api/ip');
+    const data = await res.json();
+
+    return {
+        props: { time: data.datetime },
+        revalidate: 10,
+    };
+};

@@ -28,7 +28,7 @@ export default function Home() {
                 Client Side Rendering <span>-&gt;</span>
               </h2>
               <p className={inter.className}>
-                Find in-depth information about Next.js features and&nbsp;API.
+                Typical react rendering that occurs on the client side.
               </p>
             </a>
 
@@ -42,12 +42,12 @@ export default function Home() {
                 Server Side Rendering <span>-&gt;</span>
               </h2>
               <p className={inter.className}>
-                Learn about Next.js in an interactive course with&nbsp;quizzes!
+                Rending on the server to boost SEO.
               </p>
             </a>
 
             <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+              href="/isr"
               className={styles.card}
               target="_blank"
               rel="noopener noreferrer"
@@ -56,12 +56,12 @@ export default function Home() {
                 Incremental Site Regeneration <span>-&gt;</span>
               </h2>
               <p className={inter.className}>
-                Discover and deploy boilerplate example Next.js&nbsp;projects.
+                Rendering on the server with timeout to add speed and SEO.
               </p>
             </a>
 
             <a
-              href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+              href="/ssg"
               className={styles.card}
               target="_blank"
               rel="noopener noreferrer"
@@ -70,13 +70,12 @@ export default function Home() {
                 Static Site Generation <span>-&gt;</span>
               </h2>
               <p className={inter.className}>
-                Instantly deploy your Next.js site to a shareable URL
-                with&nbsp;Vercel.
+                Rendering at build time to provide super fast renders.
               </p>
             </a>
 
             <a
-              href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+              href="/serve"
               className={styles.card}
               target="_blank"
               rel="noopener noreferrer"
@@ -85,8 +84,7 @@ export default function Home() {
                 React Server Components <span>-&gt;</span>
               </h2>
               <p className={inter.className}>
-                Instantly deploy your Next.js site to a shareable URL
-                with&nbsp;Vercel.
+                Working entirely on the server to combine SSR and SSG.
               </p>
             </a>
           </div>

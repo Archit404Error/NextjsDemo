@@ -14,7 +14,7 @@ export default function SSR({ time }: { time: string }) {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main className={styles.main}>
-                <h1 style={{ flex: 1 }}>{time}</h1>
+                <h1 style={{ flex: 1 }}>{new Date(time).toTimeString()}</h1>
             </main>
         </>
     )
