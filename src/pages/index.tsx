@@ -15,7 +15,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-
+        <h1 className={`${styles.title} ${inter.className}`}>Archit's Next.js Demo</h1>
+        <h3 className={`${styles.subtitle} ${inter.className}`}>Click on any of the cards to see an example of a next.js feature</h3>
         <div className={styles.center}>
           <div className={styles.grid}>
             <a
@@ -85,6 +86,20 @@ export default function Home() {
               </h2>
               <p className={inter.className}>
                 Working entirely on the server to combine SSR and SSG.
+              </p>
+            </a>
+
+            <a
+              href="/csr/changeme"
+              className={styles.card}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <h2 className={inter.className}>
+                Dynamic routing <span>-&gt;</span>
+              </h2>
+              <p className={inter.className}>
+                Use the route to specify page content.
               </p>
             </a>
           </div>

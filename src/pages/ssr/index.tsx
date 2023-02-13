@@ -21,10 +21,10 @@ export default function SSR({ time }: { time: string }) {
 }
 
 export const getServerSideProps: GetServerSideProps = async () => {
-    const res = await fetch('https://worldtimeapi.org/api/ip');
+    const res = await fetch('https://www.timeapi.io/api/Time/current/zone?timeZone=America/New_York');
     const data = await res.json();
 
     return {
-        props: { time: data.datetime },
+        props: { time: data.dateTime },
     };
 };

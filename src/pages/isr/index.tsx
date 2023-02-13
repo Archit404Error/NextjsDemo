@@ -20,11 +20,11 @@ export default function ISR({ time }: { time: string }) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-    const res = await fetch('https://worldtimeapi.org/api/ip');
+    const res = await fetch('https://www.timeapi.io/api/Time/current/zone?timeZone=America/New_York');
     const data = await res.json();
 
     return {
-        props: { time: data.datetime },
+        props: { time: data.dateTime },
         revalidate: 10,
     };
 };
