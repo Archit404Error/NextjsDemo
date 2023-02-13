@@ -4,13 +4,15 @@ import { useEffect, useState } from 'react'
 
 
 export default function CSR() {
-    const [time, setTime] = useState("Loading...")
+    const [title, setTitle] = useState("Loading...")
+    const [text, setText] = useState("Loading...")
 
     useEffect(() => {
         (async () => {
-            const res = await fetch("https://worldtimeapi.org/api/ip");
+            const res = await fetch('https://dummyjson.com/products/1')
             const data = await res.json();
-            setTime(data.datetime)
+            setTitle(data.title)
+            setText(data.description)
         })()
     }, [])
 
@@ -23,7 +25,8 @@ export default function CSR() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main className={styles.main}>
-                <h1 style={{ flex: 1 }}>{new Date(time).toTimeString()}</h1>
+                <h1 style={{ flex: 1 }}>{title}</h1>
+                <h2 style={{ flex: 4 }}>{text}</h2>
             </main>
         </>
     )
